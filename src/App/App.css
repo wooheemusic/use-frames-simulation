@@ -1,0 +1,26 @@
+.function-select {
+    display: flex;
+}
+
+.function-option {
+    flex: 0 1 10rem;
+    outline: none;
+    border-width: 0.125rem;
+    border-color: #888888;
+    border-style: dashed;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.function-option:hover {
+    border-color: yellowgreen;
+}
+
+.function-option.selected {
+    background-color: rgb(255, 250, 200);
+}
