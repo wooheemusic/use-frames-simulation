@@ -7,6 +7,8 @@ import { linear, getExponential, getCubicBezier, getMonomial, getQuadraticBezier
 import './App.css';
 import View from './View';
 
+const MAX_SAFE_FRAMES = 1000;
+
 const functions = new Map(); // key: function, value: string for HTML representation.
 functions.set(linear, 'Linear');
 functions.set(getMonomial, 'Monomial');
@@ -36,7 +38,8 @@ function getResolvedNum(v) {
 }
 
 function getResolvedNatural(v) {
-    return Math.floor(getResolvedNum(v));
+    v = Math.floor(getResolvedNum(v));
+    return v > MAX_SAFE_FRAMES ? MAX_SAFE_FRAMES : v;
 }
 
 function getResolvedBase(base) {
