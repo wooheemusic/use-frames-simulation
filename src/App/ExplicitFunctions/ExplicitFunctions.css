@@ -1,5 +1,7 @@
 .function-select {
     display: flex;
+    flex-wrap: wrap;
+    width: 25rem;
 }
 
 .function-option {
